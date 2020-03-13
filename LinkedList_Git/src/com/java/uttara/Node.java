@@ -2,19 +2,19 @@ package com.java.uttara;
 
 public class Node {
 
-private Node node;
+private Node next;
 private int data;
 
 Node(int data){
 	this.data=data;
 }
 
-public void setNode(Node node){
-	this.node=node;
+public void setNext(Node node){
+	this.next=node;
 }
 
-public Node getNode(){
-	return this.node;
+public Node getNext(){
+	return this.next;
 }
 
 public int getData() {
