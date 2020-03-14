@@ -1,4 +1,4 @@
-package com.java.uttara;
+package com.java.uttara.LinkedList;
 
 public class LList {
 	Node head;
@@ -163,5 +163,4 @@ public class LList {
 			}
 		}
 	}
-
 }
