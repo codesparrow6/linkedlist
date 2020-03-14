@@ -17,12 +17,34 @@ public class TestLL {
 		System.out.println("Printing Linked List of Size ="+ ll.size + " --------");
 		ll.traversal();
 		System.out.println("Head = "+ ll.getHead());	
+		if(ll.getMiddle()!=null)
+		 System.out.println("Get Middle of LL ="+ll.getMiddle().getData());
+		else
+		 System.out.println("Head is null");
 		
 		ll.delete(45);
 		System.out.println("New Head = "+ ll.getHead());	
 		System.out.println("Printing Linked List of Size ="+ ll.size + " --------");
 		ll.traversal();
 		
+		if(ll.getMiddle()!=null)
+		 System.out.println("Get Middle of LL ="+ll.getMiddle().getData());
+		else
+		 System.out.println("Head is null");
+		
+		System.out.println("Print LL in reverse order:");
+		ll.printReverse();
+		
+		
+		System.out.println("Print LL after reversing -");
+		ll.reverseLL();
+		System.out.println("Head = "+ ll.getHead());
+		ll.traversal();
+		
+		System.out.println("Print LL after reversing -");
+		ll.reverseLLRecur();
+		System.out.println("Head = "+ ll.getHead());
+		ll.traversal();
 	}
 
 }
