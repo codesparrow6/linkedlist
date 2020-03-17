@@ -71,6 +71,7 @@ public class DoublyLList {
 				node.setPrev(null);
 				temp.setNext(null);
 				size--;
+				return;
 			} else {
 				while (temp.getNext() != null) {
 					DNode prev = temp;
