@@ -22,11 +22,11 @@ public class Queue {
 		return ((this.r != null) ? this.r.getData() : -1);
 	}
 
-	void enqueue(int data) {
+	public void enqueue(int data) {
 		enqueue(this.f, this.r, data);
 	}
 
-	int dequeue() {
+	public int dequeue() {
 		return dequeue(this.f, this.r);
 	}
     
@@ -52,12 +52,12 @@ public class Queue {
 			return -1;
 		} else {
 			Node temp =f;
-			if (f == r) {
+			if (f == r) {                   //Important condition
                 this.f=this.r=null;
 				return temp.getData();
 			} else {
 				this.f = f.getNext();
-				temp.setNext(null);
+				temp.setNext(null);			//Important condition
 				return temp.getData();
 			}
 		}

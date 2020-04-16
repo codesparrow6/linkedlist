@@ -78,7 +78,7 @@ public class DoublyLList {
 					temp = temp.getNext();
 					if (temp.getData() == data) {
 						prev.setNext(temp.getNext());
-						if (temp.getNext() != null)
+						if (temp.getNext() != null)          //This condition is important
 							temp.getNext().setPrev(prev);
 						temp.setNext(null);
 						temp.setPrev(null);

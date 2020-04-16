@@ -78,8 +78,8 @@ public class LList {
 
 	void delete(Node head, int data) {
 		if (isEmpty(head))
-			return;
-		else {
+			return;       						                            //"Prev" should be initialized
+		else {                												//"Prev" should be initialized before check the data match
 			Node temp = head;
 			if (temp.getData() == data) {
 				this.head = temp.getNext();
@@ -101,8 +101,7 @@ public class LList {
 		}
 	}
 
-	// *****************CRUD Operation are
-	// finished************************************
+	// *****************CRUD Operation are finished************************************
 
 	// -------------Get the middle element of a LL
 	Node getMiddle(Node head) {
@@ -136,8 +135,8 @@ public class LList {
 	// ------Reverse LL using iterator
 	void reverseLL(Node node) {
 		if (!isEmpty(node)) {
-			Node curr = node;
-			Node prev = null;
+			Node curr = node;                               //Prev=null; curr=head; 
+			Node prev = null;                               //Always do the last Node check w.r.t curr 
 			while (curr != null) {
 				Node temp = curr.getNext();
 				curr.setNext(prev);

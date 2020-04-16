@@ -9,6 +9,7 @@ public class TestLL {
 	    System.out.println("Appending data is started");
 		ll.append(40);
 		ll.append(5);
+		System.out.println("Size ="+ll.size);
 		ll.append(10);
 		ll.append(45);
 		ll.append(15);

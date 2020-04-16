@@ -6,28 +6,28 @@ public class Stack {
 	Node top;
 	int size;
 
-	boolean isEmpty(Node top) {
+	public boolean isEmpty() {
 		if (this.top == null)
 			return true;
 		else
 			return false;
 	}
 
-	void push(int data) {
+	public void push(int data) {
 		push(this.top, data);
 	}
 
-	int pop() {
+	public int pop() {
 		return pop(this.top);
 	}
 
-	int peak() {
+	public int peak() {
 		return peak(this.top);
 	}
 
 	// ---------------------------------------------------------------------------------------------------
 
-	void push(Node top, int data) {
+	void push(Node top, int data) {				    //Understand the functionality of Push.
 		Node node = new Node(data);
 		if (null == top) {
 			this.top = node;
@@ -42,10 +42,10 @@ public class Stack {
 	}
 
 	int pop(Node top) {
-		if (!isEmpty(top)) {
+		if (!this.isEmpty()) {
 			Node temp = top;
 			this.top = top.getNext();
-			temp.setNext(null);
+			temp.setNext(null);            			  //Important condition
 			return temp.getData();
 		} else {
 			System.out.println("Stack is empty so, returning invalid value-");
@@ -54,11 +54,12 @@ public class Stack {
 	}
 
 	int peak(Node top) {
-		if (!isEmpty(top)) {
+		if (!this.isEmpty()) {
 			return top.getData();
 		} else {
 			return -1;
 		}
 	}
+
 
 }

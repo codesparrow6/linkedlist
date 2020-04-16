@@ -13,6 +13,8 @@ public class TestStack {
 		System.out.println("Peak =" + s.peak());
 		System.out.println("Pop value =" + s.pop());
 		System.out.println("Peak =" + s.peak());
+		System.out.println("Pop value =" + s.pop());
+		System.out.println("Peak =" + s.peak());
 
 	}
 }
