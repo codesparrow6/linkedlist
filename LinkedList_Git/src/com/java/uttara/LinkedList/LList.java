@@ -4,6 +4,13 @@ public class LList {
 	Node head;
 	int size;
 
+	public LList() {
+	}
+	
+	public LList(Node node)
+	{
+		this.head=node;
+	}
 	// To check head is null or not
 	boolean isEmpty(Node node) {
 		if (null == node)

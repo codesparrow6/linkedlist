@@ -2,13 +2,13 @@ package com.java.uttara.Queue;
 
 import com.java.uttara.LinkedList.Node;
 
-public class Queue {
+public class Queue implements Cloneable{
 
 	Node f, r; // front,Rear
-	int size;
+	public int size;
 
-	boolean isEmpty(Node f, Node r) {
-		if (f == null && r == null)
+	public boolean isEmpty() {
+		if (this.f == null && this.r == null)
 			return true;
 		else
 			return false;
@@ -33,39 +33,44 @@ public class Queue {
 	void reverse() {
 		reverse(this.f,this.r,this);
 	}
+
 	void enqueue(Node f, Node r, int data) {
 		Node node = new Node(data);
-		if (isEmpty(f, r)) {
+		if (this.isEmpty()) {
 			this.f = this.r = node;
+			this.size++;
 			return;
 		} else {
 			Node temp = r;
 			r.setNext(node);
 			this.r = node;
+			this.size++;
 			return;
 		}
 	}
 
 	int dequeue(Node f, Node r) {
-		if (isEmpty(f, r)) {
+		if (this.isEmpty()) {
 			System.out.println("Queue is empty,so returning invalid value");
 			return -1;
 		} else {
 			Node temp =f;
 			if (f == r) {                   //Important condition
                 this.f=this.r=null;
+                this.size--;
 				return temp.getData();
 			} else {
 				this.f = f.getNext();
 				temp.setNext(null);			//Important condition
+				this.size--;
 				return temp.getData();
 			}
 		}
 	}
-	
+
 	//Reversing a queue---------------------------------------------
 	void reverse(Node f,Node r,Queue q) {
-		if(q.isEmpty(f, r))
+		if(q.isEmpty())
 			return;
 		else {
 			int temp = q.dequeue();
