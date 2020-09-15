@@ -70,7 +70,7 @@ public class Queue implements Cloneable{
 
 	//Reversing a queue---------------------------------------------
 	void reverse(Node f,Node r,Queue q) {
-		if(q.isEmpty())
+		if(q.isEmpty())								//Check the overload method for the method signature
 			return;
 		else {
 			int temp = q.dequeue();

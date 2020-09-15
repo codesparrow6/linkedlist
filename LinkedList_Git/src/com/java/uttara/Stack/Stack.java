@@ -34,8 +34,8 @@ public class Stack {
 			size++;
 			return;
 		} else {
-			node.setNext(top);
-			this.top = node;
+			node.setNext(top);                    //No need to traverse till end of linkedlist since top consists of last element data.
+			this.top = node;                          
 			size++;
 			return;
 		}

@@ -7,9 +7,6 @@ public class QueueImplStack {
 	Stack s2 = new Stack();
 
 	void enqueue(int data) {
-		if(!s2.isEmpty())
-		  this.s2.push(data);
-		else 
 			this.s1.push(data);
 	}
 

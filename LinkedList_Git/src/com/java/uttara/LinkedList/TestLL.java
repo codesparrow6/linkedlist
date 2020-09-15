@@ -14,6 +14,22 @@ public class TestLL {
 		ll.append(45);
 		ll.append(15);
 
+		
+		String str = "0032.1721.00d9";
+				System.out.println("String Org ="+str);
+				str = str.replace(".","");
+				System.out.println("String replace ="+str);
+				int len= str.length();
+				StringBuffer strBuf = new StringBuffer();
+				strBuf.append(str);
+				int i=2;
+				while(i<strBuf.length()) {
+					strBuf.insert(i, ":");
+					i=i+3;
+				}
+				str= strBuf.toString();
+				System.out.println("String buffer converted ="+str);
+				
 		System.out.println("Appending data is completed");
 		System.out.println("Printing Linked List of Size ="+ ll.size + " --------");
 		ll.traversal();

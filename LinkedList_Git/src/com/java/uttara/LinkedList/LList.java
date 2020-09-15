@@ -8,7 +8,7 @@ public class LList {
 	}
 	
 	public LList(Node node)
-	{
+	{ 
 		this.head=node;
 	}
 	// To check head is null or not
@@ -27,8 +27,8 @@ public class LList {
 		traversal(this.head);
 	}
 
-	int getHead() {
-		return this.head.getData();
+	Node getHead() {
+		return this.head;
 	}
 
 	void delete(int data) {
@@ -142,8 +142,8 @@ public class LList {
 	// ------Reverse LL using iterator
 	void reverseLL(Node node) {
 		if (!isEmpty(node)) {
-			Node curr = node;                               //Prev=null; curr=head; 
-			Node prev = null;                               //Always do the last Node check w.r.t curr 
+			Node curr = node;                           //Prev=null; curr=head; 
+			Node prev = null;                           //Always do the last Node check w.r.t curr 
 			while (curr != null) {
 				Node temp = curr.getNext();
 				curr.setNext(prev);
@@ -163,7 +163,7 @@ public class LList {
 				return;
 			} else
 			{
-				Node temp = curr.getNext();
+				Node temp = curr.getNext();       //We should retrieve next element of Curr before setting previous element to curr because we will loss the reference
 				reverseLLRecur(curr, temp);
 				curr.setNext(prev);
 			}

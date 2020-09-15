@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 public class QueueArr {
 	int first = 0, rear = 0;
-	int Deafult_Capacity = 10;
+	int Deafult_Capacity = 4;
 	int queue[];
 
 	public QueueArr() {
@@ -15,7 +15,6 @@ public class QueueArr {
 		if (rear == queue.length) {
 			ensureCapacity();
 		}
-		else
      		queue[this.rear++] = data;
 	}
 	void ensureCapacity() {

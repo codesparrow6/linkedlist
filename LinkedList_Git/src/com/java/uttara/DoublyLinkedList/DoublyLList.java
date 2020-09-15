@@ -82,7 +82,7 @@ public class DoublyLList {
 							temp.getNext().setPrev(prev);
 						temp.setNext(null);
 						temp.setPrev(null);
-						size--;
+						size--;                              //On delete size should be decrement
 					}
 				}
 			}
